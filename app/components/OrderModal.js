@@ -10,7 +10,7 @@ export default function OrderModal() {
 
   const handleSubmit = async () => {
     if (!name || !phone) {
-      setMessage("Введите имя и номер телефона!");
+      setMessage("Напишiть iм'я та номер телефону!");
       return;
     }
 
@@ -26,13 +26,13 @@ export default function OrderModal() {
 
       const data = await res.json();
       if (res.ok) {
-        setMessage("Заказ оформлен!");
+        setMessage("Заказ отриман!");
         setTimeout(closeModal, 2000);
       } else {
         setMessage(data.error);
       }
     } catch (error) {
-      setMessage("Ошибка отправки заказа!");
+      setMessage("Error");
     } finally {
       setLoading(false);
     }
@@ -43,7 +43,7 @@ export default function OrderModal() {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
       <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-        <h2 className="text-xl font-bold mb-2">Оформить заказ</h2>
+        <h2 className="text-xl font-bold mb-2">Замофити</h2>
         <p>Товар: {product?.name}</p>
         <img src={product?.img} alt={product?.name} className="w-full h-40 object-cover rounded my-2" />
 
@@ -66,7 +66,7 @@ export default function OrderModal() {
 
         <div className="flex justify-between mt-4">
           <button onClick={closeModal} className="bg-gray-500 text-white px-4 py-2 rounded">
-            Отмена
+            Вихiд
           </button>
           <button
             onClick={handleSubmit}

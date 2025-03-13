@@ -11,7 +11,7 @@ export async function POST(req) {
       return NextResponse.json({ error: "Все поля обязательны!" }, { status: 400 });
     }
 
-    const message = `🛒 *Новый заказ!*\n\n📦 *Товар:* ${product.name}\n💰 *Цена:* ${product.price}\n👤 *Имя:* ${name}\n📞 *Телефон:* ${phone}`;
+    const message = `🛒 *Нове замовлення!*\n\n📦 *Товар:* ${product.name}\n💰 *Цiна:* ${product.price}\n👤 *Iм'я:* ${name}\n📞 *Телефон:* ${phone}`;
 
     const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
     await fetch(url, {

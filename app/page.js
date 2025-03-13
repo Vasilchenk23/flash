@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { useModalStore } from "./store/modal";
 import OrderModal from "./components/OrderModal";
 
@@ -10,13 +9,12 @@ const categories = {
     { id: 3, name: "Блокнот білий", price: "550 грн", img: "./img/7.png" },
   ],
   "Футболки": [
-    { id: 5, name: "Худi", price: "750 грн", img: "/img/hudi.jpg" },
     { id: 6, name: "Футболка чорна", price: "800 грн", img: "/img/6.png" },
   ],
   "Чашки": [
-    { id: 7, name: "Чашка з логотипом", price: "250 грн", img: "./img/17.jpg" },
-    { id: 8, name: "Чашка біла", price: "200 грн", img: "./img/1.png" },
-    { id: 9, name: "Чашка чорна", price: "300 грн", img: "./img/2.png" },
+    { id: 7, name: "Чашка", price: "250 грн", img: "./img/17.jpg" },
+    { id: 8, name: "Чашка чорна", price: "200 грн", img: "./img/1.png" },
+    { id: 9, name: "Чашка біла", price: "300 грн", img: "./img/2.png" },
   ],
   "Шопери": [
     { id: 10, name: "Шопер білий", price: "1200 грн", img: "./img/3.png" },
@@ -24,9 +22,9 @@ const categories = {
     { id: 12, name: "Шопер чорний", price: "1250 грн", img: "./img/4.png" },
   ],
   "Сувеніри-головоломки": [
-    { id: 15, name: "Кубик-головоломка", price: "400 грн", img: "./img/15.jpg" },
-    { id: 16, name: "Змійка-головоломка", price: "450 грн", img: "./img/14.jpg" },
-    { id: 17, name: "Гексагон-головоломка", price: "500 грн", img: "./img/19.jpg" },
+    { id: 15, name: "Вузол", price: "400 грн", img: "./img/15.jpg" },
+    { id: 16, name: "Все можливо", price: "450 грн", img: "./img/14.jpg" },
+    { id: 17, name: "Куб в кубі", price: "500 грн", img: "./img/19.jpg" },
   ],
 };
 
@@ -50,7 +48,7 @@ export default function Home() {
                   onClick={() => openModal(product)}
                   className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
                 >
-                  Купить
+                  Купити
                 </button>
               </div>
             ))}
